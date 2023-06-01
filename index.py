@@ -1,22 +1,61 @@
-masa = 0
+# Ejercicio N° 1
 
-masa = float (input('ingrese su indice de masa corporal ->'))
-print(f'Su indice de masa corporal es {masa}')
+nombre = 0
+altura = 0
+peso = 0
 
-if masa < 15:
+nombre = input ('Ingrese su Nombre Completo ->')
+altura = float (input('Ingrese su altura ->'))
+peso = float (input('Ingrese su peso ->'))
+
+imc = float ((peso /(altura*altura)))
+#print(imc)
+
+if imc < 15:
     print('Delgadez muy severa')
-elif masa <16 and masa >=15:
+elif imc <16 and imc >=15:
     print('Delgadez severa')
-elif masa <18.5 and masa >=16:
+elif imc <18.5 and imc >=16:
     print('Delgadez')
-elif masa <25 and masa >=18.5:
+elif imc <25 and imc >=18.5:
     print('Peso saludable')
-elif masa <30 and masa >=25:
+elif imc <30 and imc >=25:
     print('Sobrepeso')
-elif masa <35 and masa >=30:
+elif imc <35 and imc >=30:
     print('Obesidad moderada')
-elif masa <40 and masa >=35:
+elif imc <40 and imc >=35:
     print('Obesidad severa')
 else:
     print('Obesidad muy severa (Obesidad Morvida)')
+    
+# Ejercicio N° 2
 
+sexo = ''
+nombre = ''
+edad = 0
+altura = 0
+band = True
+
+sexo = input('Ingrese su sexo ->')
+nombre = input('Ingrese su nombre ->')
+edad = int (input('Ingrese su edad ->'))
+altura = float(input('Ingrese su altura ->'))
+   
+
+if sexo == 'masculino':
+        if edad >=18:
+            print('Es mayor de edad', end='. ')
+            band = False
+        if altura >1.80:
+            print('Es un hombre alto')
+            band = False
+elif sexo == 'femenino':
+        if edad >=18:
+            print('Es mayor de edad', end='. ')
+            band = False
+        if altura >1.70:
+            print('Es una mujer alta')
+            band = False              
+if band:
+    print(nombre)
+    
